@@ -28,7 +28,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    # change "homepage" in package.json with current repository name
+    # change "homepage" in shopdata.json with current repository name
     - run: touch repository.txt
     - run: echo ${{ github.repository }} >> repository.txt
     - run: sed -i 's/.*\///' repository.txt
